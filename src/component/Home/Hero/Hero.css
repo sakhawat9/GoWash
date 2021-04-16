@@ -1,0 +1,8 @@
+.hero-style{
+    background-image: url(../../../images/imageBg-01.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 70px;
+}

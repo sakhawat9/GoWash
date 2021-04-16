@@ -1,0 +1,7 @@
+.process-style img {
+    width: 200px;
+    padding: 40px;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}

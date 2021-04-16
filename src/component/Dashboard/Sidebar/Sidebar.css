@@ -1,0 +1,25 @@
+.sidebar{
+    background-image: linear-gradient(40deg, #19d3ae,#0fcfec);
+    position: fixed;
+}
+.laundry{
+    font-weight: 700;
+    color: black;
+}
+.laundry:hover{
+    color: black;
+    text-decoration: none;
+}
+.sidebar li{
+    margin-bottom: 2em;
+}
+.sidebar li:hover span{
+    display: inline-block;
+    transform: translate(5px);
+}
+.sidebar svg{
+    margin-right: 5px;
+}
+.li-style li{
+    margin-bottom: 20px;
+}

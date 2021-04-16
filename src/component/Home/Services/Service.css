@@ -1,0 +1,14 @@
+.service-style{
+    border-radius: 5px;
+    background-color: #F8F8F7;
+}
+.service-style:hover{
+    box-shadow: 5px 5px 30px 20px #bdbaba;
+}
+.service-style img{
+    width: 100%;
+    border-radius: 5px;
+}
+.service-style p{
+    color: #808080;
+}

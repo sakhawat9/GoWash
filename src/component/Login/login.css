@@ -1,0 +1,18 @@
+.login-style{
+    margin-top: 150px;
+}
+.google-button{
+    width: 450px;
+    
+}
+.google-button img{
+    width: 40px;
+    float: left;
+}
+.centered{
+    align-items: center;
+    justify-content: center;
+    grid-gap: 15px;
+    padding: 10px;
+    height: auto;
+}
