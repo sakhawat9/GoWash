@@ -1,0 +1,9 @@
+.bookingList-style img{
+    width: 150px;
+    border-radius: 10px;
+}
+.bookingList-style{
+    background-color: #fff;
+    padding: 40px;
+    margin: 40px;
+}

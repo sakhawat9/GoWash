@@ -1,23 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Home from './component/Home/Home/Home';
-import Login from './component/Login/Login';
-import { createContext } from 'react';
-import { useState } from 'react';
-import AddService from './component/AddService/AddService';
-import Sidebar from './component/Dashboard/Sidebar/Sidebar';
-import Booking from './component/Booking/Booking';
-import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./component/Home/Home/Home";
+import Login from "./component/Login/Login";
+import { createContext } from "react";
+import { useState } from "react";
+import AddService from "./component/AddService/AddService";
+import Sidebar from "./component/Dashboard/Sidebar/Sidebar";
+import Booking from "./component/Booking/Booking";
+import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
+import Review from "./component/Review/Review";
+import BookingList from "./component/BookingList/BookingList";
+import OrderList from "./component/OrderList/OrderList";
+import MakeAdmin from "./component/MakeAdmin/MakeAdmin";
 
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <div>
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
@@ -27,14 +27,26 @@ function App() {
               <Home />
             </Route>
             <PrivateRoute path="/addService">
-              <AddService /> 
+              <AddService />
             </PrivateRoute>
             <Route path="/sidebar">
-            <Sidebar />
+              <Sidebar />
             </Route>
             <PrivateRoute path="/booking">
               <Booking />
             </PrivateRoute>
+            <Route path="/review">
+              <Review />
+            </Route>
+            <Route path="/bookingList">
+              <BookingList />
+            </Route>
+            <Route path="/orderList">
+              <OrderList />
+            </Route>
+            <Route path="/makeAdmin">
+              <MakeAdmin />
+            </Route>
             <Route path="/login">
               <Login />
             </Route>
@@ -43,7 +55,7 @@ function App() {
             </Route>
           </Switch>
         </Router>
-        </UserContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }

@@ -63,13 +63,13 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/doctor/prescriptions" className="text-white">
+              <Link to="/bookingList" className="text-white">
                 <FontAwesomeIcon icon={faList} />{" "}
                 <span>Booking List</span>
               </Link>
             </li>
             <li>
-              <Link to="/doctor/prescriptions" className="text-white">
+              <Link to="/review" className="text-white">
                 <FontAwesomeIcon icon={faGripHorizontal} />{" "}
                 <span>Review</span>
               </Link>

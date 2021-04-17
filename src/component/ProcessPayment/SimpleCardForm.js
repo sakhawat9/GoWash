@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 
-const SimpleCardForm = () => {
+const SimpleCardForm = ({handlePayment}) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -27,6 +27,7 @@ const SimpleCardForm = () => {
     } else {
         setPaymentSuccess(paymentMethod.id)
         setPaymentError(null)
+        handlePayment(paymentMethod.id)
     }
   };
 
@@ -34,7 +35,7 @@ const SimpleCardForm = () => {
     <div>
         <form onSubmit={handleSubmit}>
         <CardElement />
-        <button className="btn-brand" type="submit" disabled={!stripe}>
+        <button className="btn-brand py-1" type="submit" disabled={!stripe}>
             Pay
         </button>
         </form>
