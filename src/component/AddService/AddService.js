@@ -21,7 +21,7 @@ const AddService = () => {
         formData.append('price', service.price);
         formData.append('textarea', service.textarea);
       
-        fetch('http://localhost:5000/service', {
+        fetch('https://mighty-eyrie-38405.herokuapp.com/service', {
           method: 'POST',
           body: formData
         })
