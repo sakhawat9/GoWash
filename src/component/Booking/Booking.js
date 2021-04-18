@@ -17,7 +17,7 @@ const Booking = () => {
 loggedInUser.isLoggedIn !== true && history.push(`/login`);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleService/${_id}`)
+        fetch(`https://mighty-eyrie-38405.herokuapp.com/singleService/${_id}`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);

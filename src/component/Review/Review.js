@@ -14,14 +14,15 @@ const Review = () => {
         setFile(newFile)
 
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const formData = new FormData()
         formData.append('file', file)
         formData.append('name', review.name)
         formData.append('title', review.title)
         formData.append('textarea', review.textarea)
 
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://mighty-eyrie-38405.herokuapp.com/addReview', {
             method: 'POST',
             body: formData,
         })

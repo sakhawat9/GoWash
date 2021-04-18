@@ -1,6 +1,7 @@
 .service-style{
     border-radius: 5px;
     background-color: #F8F8F7;
+   
 }
 .service-style:hover{
     box-shadow: 5px 5px 30px 20px #bdbaba;
@@ -11,4 +12,18 @@
 }
 .service-style p{
     color: #808080;
+}
+.service-style figure{
+    overflow: hidden;
+}
+
+.service-style figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.service-style:hover figure img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
 }

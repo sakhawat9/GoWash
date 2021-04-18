@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Spinner } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import Services from '../Services/Services';
 
 
 const Service = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('https://mighty-eyrie-38405.herokuapp.com/service')
         .then(res => res.json())
         .then(data =>{
             // console.log(data);
@@ -20,7 +20,12 @@ const Service = () => {
                 <h4 className="text-center text-brand p-5">Our Services</h4>
                 <div className="row">
                     {
-                        services.length === 0 ? <Row><Spinner animation="grow" /></Row> : services.map(service =><Services service={service} key={service._id}></Services>)
+                        services.length === 0 ?
+                         <div className="text-center w-100">
+                             <Spinner animation="grow" />
+                         </div>
+                         :
+                          services.map(service =><Services service={service} key={service._id}></Services>)
                     }
                 </div>
             </Container>

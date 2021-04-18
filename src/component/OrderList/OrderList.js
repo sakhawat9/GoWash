@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import React, { useContext, useEffect, useState } from 'react';
+import {  Spinner, Table } from 'react-bootstrap';
+import { UserContext } from '../../App';
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
 import Order from '../Order/Order';
 
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
+    const [loggedInUser, setLoggedInUser ] = useContext(UserContext);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('http://localhost:5000/orders?email=' + loggedInUser.email)
         .then(res => res.json())
         .then(data => {
             //  console.log(data);
@@ -30,7 +32,12 @@ const OrderList = () => {
             </thead>
             
             {
-              orders.length !== 0 && orders.map(order => <Order order={order} key={order.length}></Order>)
+              orders.length === 0 ?
+              <div className="text-center w-100">
+                <Spinner animation="grow" />
+            </div>
+                :
+                 orders.map(order => <Order order={order} key={order.length}></Order>)
             }
             
         </Table>

@@ -11,7 +11,9 @@ const Services = ({service}) => {
     return (
         <div className="col-md-6 col-lg-4">
             <div className="p-3 mb-3 service-style">
+                <figure>
                 <img src={`data:image/jpeg;base64,${service.image.img}`} />
+                </figure>
                 <h3 className="pt-3">{name}</h3>
                 <h3>${price}</h3>
                 <p>{textarea}</p>

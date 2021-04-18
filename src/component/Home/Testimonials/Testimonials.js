@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Spinner } from 'react-bootstrap';
+import { Container,  Spinner } from 'react-bootstrap';
 import Testimonial from './Testimonial';
 
 const Testimonials = () => {
     const [review, setReview] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://mighty-eyrie-38405.herokuapp.com/review')
         .then(res => res.json())
         .then(data => {
             setReview(data)
@@ -19,7 +19,12 @@ const Testimonials = () => {
             <div className="row">
             
             {
-                review.length === 0 ? <Row><Spinner animation="grow" /></Row> : review.map(review => <Testimonial review={review} key={review._id}></Testimonial>)
+                review.length === 0 ? 
+                <div className="text-center w-100">
+                    <Spinner animation="grow" />
+                </div> 
+                :
+                  review.map(review => <Testimonial review={review} key={review._id}></Testimonial>)
             }
             </div>
             </Container>

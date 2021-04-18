@@ -14,7 +14,8 @@ const AddService = () => {
         const newFile = e.target.files[0];
         setFile(newFile)
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const formData = new FormData()
         formData.append('file', file)
         formData.append('name', service.name);
