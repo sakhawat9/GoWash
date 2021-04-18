@@ -6,7 +6,7 @@ import Manage from '../Manage/Manage';
 const ManageServices = () => {
     const [manageService, setManageService] = useState([])
     useEffect(() => {
-        fetch(`https://mighty-eyrie-38405.herokuapp.com/service`)
+        fetch(`http://localhost:5000/service`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);

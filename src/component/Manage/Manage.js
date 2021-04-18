@@ -5,7 +5,7 @@ const Manage = ({service}) => {
     const {name, textarea, _id, image} = service;
 
     const deleteProduct = (id) => {
-        fetch(`https://mighty-eyrie-38405.herokuapp.com/delete/${id}`, {
+        fetch(`http://localhost:5000/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

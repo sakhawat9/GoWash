@@ -6,7 +6,7 @@ import AllBookings from "../AllBookings/AllBookings";
 const BookingList = () => {
     const [booking, setBooking] = useState([])
     useEffect(() => {
-        fetch(`https://mighty-eyrie-38405.herokuapp.com/orders`)
+        fetch(`http://localhost:5000/orders`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);

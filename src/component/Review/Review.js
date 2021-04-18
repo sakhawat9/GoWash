@@ -21,7 +21,7 @@ const Review = () => {
         formData.append('title', review.title)
         formData.append('textarea', review.textarea)
 
-        fetch('https://mighty-eyrie-38405.herokuapp.com/addReview', {
+        fetch('http://localhost:5000/addReview', {
             method: 'POST',
             body: formData,
         })
