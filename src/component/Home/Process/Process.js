@@ -6,7 +6,7 @@ import delivery from '../../../images/shirt.png';
 import { Container } from 'react-bootstrap';
 import './Process.css'
 
-console.log(process);
+
 const Process = () => {
     return (
         <section className="text-center">

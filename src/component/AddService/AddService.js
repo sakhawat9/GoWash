@@ -10,12 +10,10 @@ const AddService = () => {
         newService[e.target.name] = e.target.value;
         setService(newService);
     }
-    console.log(service);
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
         setFile(newFile)
     }
-    console.log(file);
     const handleSubmit = () => {
         const formData = new FormData()
         formData.append('file', file)
@@ -29,7 +27,7 @@ const AddService = () => {
         })
         .then(response => response.json())
         .then(data => {
-          console.log(data)
+          alert("Service added successfully.")
         })
         .catch(error => {
           console.error(error)

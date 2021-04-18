@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from '../../../images/logo.png'
 import "./Sidebar.css";
 
 import { UserContext } from "../../../App";
@@ -32,7 +33,7 @@ const Sidebar = () => {
       style={{ height: "100vh" }}
     >
       <ul className="list-unstyled li-style">
-      <h2 className="pb-4"><Link className="laundry" to="/">Laundry Service</Link></h2>
+      <Link className="laundry" to="/"><img src={logo} alt=""/></Link>
         <li>
           <Link to="/orderList" className="text-white">
             <FontAwesomeIcon icon={faList} /> <span>Order List</span>
@@ -51,7 +52,7 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="#" className="text-white">
+              <Link to="/manageService" className="text-white">
                 <FontAwesomeIcon icon={faGripHorizontal} />{" "}
                 <span>Manage Services</span>
               </Link>

@@ -13,6 +13,7 @@ import Review from "./component/Review/Review";
 import BookingList from "./component/BookingList/BookingList";
 import OrderList from "./component/OrderList/OrderList";
 import MakeAdmin from "./component/MakeAdmin/MakeAdmin";
+import ManageServices from "./component/ManageServices/ManageServices";
 
 export const UserContext = createContext();
 
@@ -32,6 +33,9 @@ function App() {
             <PrivateRoute path="/sidebar">
               <Sidebar />
             </PrivateRoute>
+            <Route path="/manageService">
+              <ManageServices />
+            </Route>
             <PrivateRoute path="/booking/:_id">
               <Booking />
             </PrivateRoute>

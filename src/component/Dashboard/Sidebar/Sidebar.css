@@ -2,9 +2,9 @@
     background-image: linear-gradient(40deg, #19d3ae,#0fcfec);
     position: fixed;
 }
-.laundry{
-    font-weight: 700;
-    color: black;
+.laundry img{
+    width: 100%;
+    padding-bottom: 20px;
 }
 .laundry:hover{
     color: black;

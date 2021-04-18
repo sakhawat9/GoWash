@@ -1,0 +1,11 @@
+.manage-style{
+    border-radius: 5px;
+    background-color: #fff;
+}
+.manage-style img{
+    width: 100%;
+    border-radius: 5px;
+}
+.manage-style p{
+    color: #808080;
+}

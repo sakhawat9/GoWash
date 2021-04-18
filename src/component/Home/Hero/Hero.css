@@ -1,8 +1,32 @@
+.hero{
+    padding-left: 180px;
+}
 .hero-style{
     background-image: url(../../../images/imageBg-01.png);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     height: 500px;
     margin-bottom: 70px;
+    
+}
+/* .hero-style::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000, inset -120px -100px -250px #000;
+} */
+.hero::after {
+    height:100%;
+    content:'';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    background-color: #afb3c0;
+    z-index: -50;
 }

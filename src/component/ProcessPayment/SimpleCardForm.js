@@ -27,7 +27,7 @@ const SimpleCardForm = ({handlePayment}) => {
     } else {
         setPaymentSuccess(paymentMethod.id)
         setPaymentError(null)
-        handlePayment(paymentMethod.id)
+        handlePayment(paymentMethod.card)
     }
   };
 

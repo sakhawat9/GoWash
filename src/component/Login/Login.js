@@ -29,8 +29,7 @@ const Login = () => {
       .signInWithPopup(provider)
       .then((result) => {
         const { displayName, email, photoURL } = result.user;
-        const signedInUser = { userName: displayName, email, photoURL };
-        console.log(signedInUser);
+        const signedInUser = { userName: displayName, email, photoURL, isLoggedIn: true };
         setUserToken();
         setLoggedInUser(signedInUser);
         history.replace(from);
