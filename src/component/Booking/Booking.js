@@ -33,7 +33,7 @@ loggedInUser.isLoggedIn !== true && history.push(`/login`);
         }
 
         
-        fetch('http://localhost:5000/addBooking', {
+        fetch('https://mighty-eyrie-38405.herokuapp.com/addBooking', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
@@ -66,7 +66,10 @@ loggedInUser.isLoggedIn !== true && history.push(`/login`);
                     <label htmlFor="paypal">PayPal</label>
                     
                 </form>
-                <ProcessPayment handlePayment={handlePaymentSuccess} />
+                <div className="m-4 p-3 col-md-6">
+                    <ProcessPayment handlePayment={handlePaymentSuccess} />
+                </div>
+                
                 
             </div>
         </section>

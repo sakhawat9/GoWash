@@ -28,7 +28,8 @@ const Review = () => {
         })
         .then(response => response.json())
         .then(data => {
-          console.log('data', data)
+          alert("Your Review Successfully")
+
         })
         .catch(error => {
           console.log(error)

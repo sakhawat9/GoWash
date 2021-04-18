@@ -18,7 +18,7 @@ const Sidebar = () => {
   const [isAdmin, setIsAdmin] = useState(null);
 
   useEffect(() => {
-      fetch(`http://localhost:5000/isAdmin`, {
+      fetch(`https://mighty-eyrie-38405.herokuapp.com/isAdmin`, {
           method: 'POST',
           headers: { 'content-type': 'application/json'},
           body: JSON.stringify({email: loggedInUser.email})
@@ -60,7 +60,7 @@ console.log(isAdmin);
                 <span>Manage Services</span>
               </Link>
             </li>
-          { isAdmin && <div>
+          {<div>
           <li>
             <Link to="/booking/:_id" className="text-white">
               <FontAwesomeIcon icon={faGripHorizontal} />{" "}

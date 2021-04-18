@@ -8,7 +8,7 @@ const OrderList = () => {
     const [orders, setOrders] = useState([]);
     const [loggedInUser, setLoggedInUser ] = useContext(UserContext);
     useEffect(() => {
-        fetch('https://mighty-eyrie-38405.herokuapp.com/orders?email=' + loggedInUser.email)
+        fetch('https://mighty-eyrie-38405.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => {
             //  console.log(data);
@@ -33,9 +33,7 @@ const OrderList = () => {
             
             {
               orders.length === 0 ?
-              <div className="text-center w-100">
-                <Spinner animation="grow" />
-            </div>
+              "No Order found"
                 :
                  orders.map(order => <Order order={order} key={order.length}></Order>)
             }
