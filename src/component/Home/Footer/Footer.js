@@ -1,6 +1,4 @@
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import logo from '../../../images/logo.png'
@@ -36,7 +34,7 @@ const Footer = () => {
                         <h3 className="text-brand">+123456789</h3>
                         <p>123, New Lenox, Chicago IL 60606</p>
                         <a href="#">info@yoursitename.com</a><br/><br/>
-                        <a href="#"><FontAwesomeIcon /></a>
+                        <a href="#"></a>
                         <a href="#"></a>
                         <a href="#"></a>
                     </div>

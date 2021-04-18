@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
-  // const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   // const [isDoctor, setIsDoctor] = useState(false);
 
   // useEffect(() => {
@@ -51,13 +51,13 @@ const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/doctor/prescriptions" className="text-white">
+              <Link to="#" className="text-white">
                 <FontAwesomeIcon icon={faGripHorizontal} />{" "}
                 <span>Manage Services</span>
               </Link>
             </li>
             <li>
-              <Link to="/booking" className="text-white">
+              <Link to="/booking/:_id" className="text-white">
                 <FontAwesomeIcon icon={faGripHorizontal} />{" "}
                 <span>Book</span>
               </Link>
@@ -78,8 +78,8 @@ const Sidebar = () => {
         }
       </ul>
       <div>
-        <Link to="/" className="text-white">
-          <FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span>
+        <Link to="/login" className="text-white">
+          <FontAwesomeIcon icon={faSignOutAlt} onClick={() => setLoggedInUser({})} /> <span>Logout</span>
         </Link>
       </div>
     </div>

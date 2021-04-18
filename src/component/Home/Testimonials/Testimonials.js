@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
-import image from '../../../images/imageBg-01.jpg'
+import { Container, Row, Spinner } from 'react-bootstrap';
 import Testimonial from './Testimonial';
 
 const Testimonials = () => {
@@ -21,7 +20,7 @@ const Testimonials = () => {
             <div className="row">
             
             {
-                review.map(review => <Testimonial review={review} key={review._id}></Testimonial>)
+                review.length === 0 ? <Row><Spinner animation="grow" /></Row> : review.map(review => <Testimonial review={review} key={review._id}></Testimonial>)
             }
             </div>
             </Container>

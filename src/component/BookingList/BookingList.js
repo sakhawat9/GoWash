@@ -16,8 +16,12 @@ const BookingList = () => {
         <div className="col-md-6">
           <div className="bookingList-style">
             <div className="row">
+              <div className="col">
               <img src={image} alt="" />
-              <button className="btn-brand ml-auto">pandding..</button>
+              </div>
+              <div className="col">
+              
+              </div>
             </div>
             <h3>Office Interior Design</h3>
             <p>
@@ -30,7 +34,7 @@ const BookingList = () => {
           <div className="bookingList-style">
             <div className="row">
               <img src={image} alt="" />
-              <button className="btn-brand ml-auto">pandding..</button>
+              
             </div>
             <h3>Office Interior Design</h3>
             <p>

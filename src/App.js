@@ -29,10 +29,10 @@ function App() {
             <PrivateRoute path="/addService">
               <AddService />
             </PrivateRoute>
-            <Route path="/sidebar">
+            <PrivateRoute path="/sidebar">
               <Sidebar />
-            </Route>
-            <PrivateRoute path="/booking">
+            </PrivateRoute>
+            <PrivateRoute path="/booking/:_id">
               <Booking />
             </PrivateRoute>
             <Route path="/review">

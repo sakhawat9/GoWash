@@ -1,10 +1,10 @@
-import { Link } from '@material-ui/core';
 import React from 'react';
 import { useHistory } from 'react-router';
 import './Service.css'
 
 const Services = ({service}) => {
     const {_id, name, price, textarea} = service;
+    console.log(_id);
     const history = useHistory()
     const handleServiceClick = () => {
         history.push(`/booking/${_id}`)
@@ -16,7 +16,7 @@ const Services = ({service}) => {
                 <h3>{name}</h3>
                 <h3>${price}</h3>
                 <p>{textarea}</p>
-                <button onClick={handleServiceClick} className="btn-brand my-4">LEARN MORE</button>
+                <button onClick={handleServiceClick} className="btn-brand my-4">BUY NOW</button>
             </div>
         </div>
     );
