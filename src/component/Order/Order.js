@@ -3,7 +3,7 @@ import React from 'react';
 const Order = ({order}) => {
     const {userName, email, name,  _id, status, payment} = order;
     const handleStatusChange = (id, st) => {
-        fetch('http://localhost:5000/updateOrderStatus', {
+        fetch('https://mighty-eyrie-38405.herokuapp.com/updateOrderStatus', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

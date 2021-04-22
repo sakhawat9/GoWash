@@ -15,7 +15,7 @@ const Manage = ({service}) => {
       };
       const loadProduct = (id) => {
         console.log("id", id);
-        fetch(`http://localhost:5000/update/${id}`)
+        fetch(`https://mighty-eyrie-38405.herokuapp.com/update/${id}`)
         .then((res) => res.json())
         .then(data =>{
           const update = document.getElementById('update');
