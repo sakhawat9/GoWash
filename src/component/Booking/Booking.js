@@ -20,12 +20,15 @@ loggedInUser.isLoggedIn !== true && history.push(`/login`);
         fetch(`https://mighty-eyrie-38405.herokuapp.com/singleService/${_id}`)
         .then(res => res.json())
         .then(data => {
-            // console.log(data);
+            data[0].status = 'Pending';
+            delete data[0]._id;
             setBookingData(data[0])
         })
     }, [])
 
+    console.log(bookingData);
     const handlePaymentSuccess = payment => {
+
         const orderDetails = {
             ...loggedInUser,
             ...bookingData,
