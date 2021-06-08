@@ -1,12 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import {  Spinner, Table } from 'react-bootstrap';
-import { UserContext } from '../../App';
+import React, {  useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
 import Order from '../Order/Order';
 
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
-    const [loggedInUser, setLoggedInUser ] = useContext(UserContext);
     useEffect(() => {
         fetch('https://mighty-eyrie-38405.herokuapp.com/orders')
         .then(res => res.json())
@@ -35,7 +33,7 @@ const OrderList = () => {
               orders.length === 0 ?
               "No Order found"
                 :
-                 orders.map(order => <Order order={order} key={order.length}></Order>)
+                 orders.map(order => <Order order={order} key={orders._id}></Order>)
             }
             
         </Table>
